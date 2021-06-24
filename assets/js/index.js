@@ -10,6 +10,7 @@ canvas.height = innerHeight
 const scoreEl = document.querySelector('#scoreEl')
 const startGameBtn = document.querySelector('#startGameBtn')
 const modalEL = document.querySelector('#modalEL')
+const bigScoreEl = document.querySelector('#bigScoreEl')
 
 //create the Player class
 class Player {
@@ -201,7 +202,9 @@ function animate() {
         const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y)
         //End game
         if (dist - enemy.radius - player.radius < 1) {
-          cancelAnimationFrame(animationId)   
+          cancelAnimationFrame(animationId) 
+          modalEL.style.display = 'flex'
+          bigScoreEl.innerHTML =  score
         }
 
         projectiles.forEach((projectile, projectileIndex) => {
