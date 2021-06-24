@@ -121,7 +121,7 @@ const y = canvas.height / 2
 
 
 //Create the player
-const player = new Player(x, y, 10, 'white')
+let player = new Player(x, y, 10, 'white')
 
 
 //Put the projectile here to allow it be accessed within the animate function
@@ -130,9 +130,19 @@ const projectile = new Projectile(canvas.width / 2, canvas.height / 2, 5, 'red',
     y: 1
 })
 //create an array to draw multiple projectiles and enemies
-const projectiles = []
-const enemies = []
-const particles = []
+let projectiles = []
+let  enemies = []
+let  particles = []
+
+function init() {
+     player = new Player(x, y, 10, 'white')
+     projectiles = []
+     enemies = []
+     particles = []
+     score = 0
+     scoreEl.innerHTML = score
+     bigScoreEl.innerHTML = score
+}
 
 function spawnEnemies() {
     setInterval(() => {
@@ -276,6 +286,7 @@ addEventListener('click', (event) => {
 })
 
 startGameBtn.addEventListener('click', () => {
+    init()
     animate()
     spawnEnemies()
     modalEL.style.display = 'none'
