@@ -7,6 +7,9 @@ const ctxt = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 
+const scoreEl = document.querySelector('#scoreEl')
+console.log(scoreEl)
+
 //create the Player class
 class Player {
     constructor(x, y, radius, color) {
@@ -163,6 +166,7 @@ function spawnEnemies() {
 
 //Create a function to animate the projectile
 let animationId 
+let score = 0
 function animate() {
     animationId = requestAnimationFrame(animate)
     ctxt.fillStyle = 'rgba(0, 0, 0, 0.1)'//This creates a motion blur effect
@@ -204,6 +208,8 @@ function animate() {
         
          //Projectiles touch enemy
          if (dist - enemy.radius - projectile.radius < 1) {
+
+         
          //Make explosion   
             for (let i = 0; i < enemy.radius * 2; i++) {
                particles.push(new Particle(projectile.x, projectile.y,
@@ -214,6 +220,11 @@ function animate() {
             }
 
             if (enemy.radius - 10 > 5) {
+
+                //increase score
+                score += 100
+                scoreEl.innerHTML = score
+
                 gsap.to(enemy, {
                     radius: enemy.radius - 10
                 })
@@ -221,6 +232,11 @@ function animate() {
                     projectiles.splice(projectileIndex, 1) 
                     }, 0)  
             } else {
+               
+                //completely remove from scene
+                score += 250
+                scoreEl.innerHTML = score
+
                setTimeout(() => {
             enemies.splice(index, 1) 
             projectiles.splice(projectileIndex, 1) 
