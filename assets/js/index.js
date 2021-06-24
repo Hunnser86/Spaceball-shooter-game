@@ -12,6 +12,7 @@ const startGameBtn = document.querySelector('#startGameBtn')
 const modalEL = document.querySelector('#modalEL')
 const bigScoreEl = document.querySelector('#bigScoreEl')
 
+
 //create the Player class
 class Player {
     constructor(x, y, radius, color) {

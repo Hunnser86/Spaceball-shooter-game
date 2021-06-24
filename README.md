@@ -43,16 +43,16 @@ It is designed to be responsive to different screen sizes, so any player can use
 
    * **Typography**
 
-       *  I used the font Poppins as the main font for the website, and I used Sans Serif as a secondary font, incase Poppins did not load correctly.  I used Poppins, as it is easy to read and has a soft rounded look, which feels welcoming.
+       *  I used the standard Sans serif font for my score and my modal.
+       I did this as I felt it fit the style of the game.
 
    * **Imagery**
 
-     *  The imagery I used on the landing page is contextual to the product being promoted on the site, as it is of a paint roller for the landing page.  
-        I edited the photo on canva and adjusted the brightness, just enough to give some contrast to the text above it, but not so much as to stop the viewer from making it out.
+     *  The imagery used was a simple black background with colourful enemies to allow for good contrast.
 
 * **Wireframes**
 
-    * I made wire frames for each type of device that would potentially be used when viewing the website.
+    * I made some simple wireframes in the design process to show how it will look on desktop and mobile.
 
     ![Screenshot of Wireframe design process](/assets/Wireframes/Wireframe1.png)
 
