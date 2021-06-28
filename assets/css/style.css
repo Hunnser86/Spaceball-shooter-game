@@ -1,8 +1,9 @@
 /*Remove the margin from the browser*/
 
 body{
-    margin: 0;
     background: black;
+    margin: 0;
+    
     
 }
 

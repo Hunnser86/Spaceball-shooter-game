@@ -54,10 +54,10 @@ It is designed to be responsive to different screen sizes, so any player can use
 
     * I made some simple wireframes in the design process to show how it will look on desktop and mobile.
 
-    ![Screenshot of Wireframe design process](/assets/Wireframes/Wireframe1.png)
+    ![screenshot of the wireframe process](../assets/wireframes/wireframe-1.jpg)
 
 
-    ![Screenshot of Wireframe for desktop](/assets/Wireframes/Wireframe2.png)
+    ![Screenshot of Wireframe for desktop](../assets/wireframes/wireframe-2.jpg)
 
     
 # Features 
@@ -115,33 +115,25 @@ It is designed to be responsive to different screen sizes, so any player can use
 
  ## **Frameworks, Libraries and Programs Used**
 
- 1. [Google Fonts:](https://fonts.google.com/)
+ 1. [Tailwind CSS](https://tailwindcss.com/)
 
-    * I used Google Fonts to link the Poppins font for use on the website. 
- 
- 2. [Font Awesome:](https://fontawesome.com/)
+   * I used Tailwind to create the modal that displays the final score and the button for starting the game.
 
-    * I used Font Awesome to provide the social media links in the footer of the site.
-
- 3. [Bootstrap V5.0.0:](https://getbootstrap.com/) 
-
-    * I used bootstrap to help with the responsiveness of the site, and to provide the information for the form on the quotes page.
-
- 4. [jsdelivr:](https://getbootstrap.com/)   
+ 2. [jsdelivr:](https://getbootstrap.com/)   
 
    * jsdelivr was used to enable GitHub to serve my web files without any configuration.
 
- 5. [Git:](https://github.com/)  
+ 3. [Git:](https://github.com/)  
 
-    * Git was used for version control of the website by using the git commit and git push functions in the terminal, to to ensure any changes I made were not lost and were also meaningful to the development process. It would also help any other developers to assess or make changes in a real world setting.
+   * Git was used for version control of the website by using the git commit and git push functions in the terminal, to to ensure any changes I made were not lost and were also meaningful to the development process. It would also help any other developers to assess or make changes in a real world setting.
 
- 6. [GitHub:](https://github.com/)
+ 4. [GitHub:](https://github.com/)
 
-    *  GitHub was used to store the code from the project after being pushed from the terminal.
+   *  GitHub was used to store the code from the project after being pushed from the terminal.
 
- 7. [Adobe XD:](https://www.adobe.com/uk/products/xd.html)  
+ 5. [Adobe XD:](https://www.adobe.com/uk/products/xd.html)  
 
-    * I used Adobe XD for the Wireframe, to full site visual design process.
+  * I used Adobe XD for the Wireframe, to full site visual design process.
 
 
 # Testing
@@ -157,46 +149,12 @@ For testing the code, I used the following;
 These were used in particular, to check for errors in the code to enable me
 to rectify these and have a fully functioning website.
 
-## There were three errors on the index.html page.
- 
- * The "hero" element was inside the "main" element.
-
- * The a tag was a descendent of the button tag X 2. 
-
-## There was one error on the porfolio page.
-
- * The a tag was a descendent of the button tag.
-
-## There were no errors on the Contact page.
-
-## There were no errors in the CSS code.
----
-## Fixing the errors
----
-### All The above errors were fixed.
-
-The first error was simple to fix.  All I needed to change, was the "hero" to a regular div.
-I had some trouble fixing the second error, as I had to restyle the links to look like the buttons I had used 
-initially.  Once I had done this, there were zero errors on all pages. (PHEW!)
-
----
-
-# Testing on multiple browsers
-
-### All browser tests were carried out on desktop, iPad, large Huawei mobile phone and a small iPhone.
-
-I tested the site on multiple browsers, to check that everything loaded.  In particular
-I wanted to check the animations, where I needed to ensure I used @-moz- @-webkit and @-o-
-for the keyframes.
-
-To do this I simply visited the site on [Chrome](https://www.google.co.uk/chrome/?brand=FHFK&gclid=EAIaIQobChMIv6_PlqzH7wIVitPtCh2jJQhnEAAYASAAEgImw_D_BwE&gclsrc=aw.ds),
-[Firefox](https://www.mozilla.org/en-GB/firefox/new/) and [Opera](https://www.opera.com) browsers to see if it worked.
-Next I inspected the code and tested the responsiveness on various screen sizes.
-
-All the browsers loaded with no problems and all the responsiveness tests (Viewing the site on various devices and dragging the responsive screen)
-passed with no problems.  As well as testing the site on various browsers and mock up devices on my desktop, I downloaded
-the browsers on my mobile phone and viewed it on there too.  All the browsers loaded with no problems on the mobile versions 
-of the browsers too.
+| Test Label     | Test Action   | Expected Outcome  | Test Outcome | 
+| -------------  |-------------- |----------------- | ------------ |
+| Game Setup     | The modal is <br> displayed and the <br> button starts the <br>game. | The game starts. | PASS
+| The player is <br> displayed      | Start the game<br> to check.      |  The player is <br> displayed  | PASS
+| The score is<br>displayed.  | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
+| enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
 
 
 ## Site owner Goals testing
