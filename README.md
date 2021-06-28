@@ -61,46 +61,45 @@ It is designed to be responsive to different screen sizes, so any player can use
 
     
 # Features 
-  ### Page Headers
+  ### Start Game
      
-* Each page has a header, with a responsive Nav bar, containing links to other pages of the site
-and a logo that brings the user back to the home page.
+* At the beginning of the game, a modal is displayed, with a button that says "start game" 
 
-* Below the Nav bar on each page is a hero with a contextual image and an overview of the page.
+### End Game
 
-### Carousel
+* When the player gets a game over, the modal is displayed once again, with the players score and the start game button. 
 
-* On the home page there is a carousel that shows some images of previous work.
+### Score
 
-### Buttons
+* In the top left corner of the screen, there will be a simple scoreboard, 
+  displaying "Score:0".  This will increment when a player ditroys an enemy. 
+  
 
-* On all pages, there are some buttons that relate to the particular part of the page.
-They are linked to the relevant parts of the site, making it easy for the user to navigate to where 
-they need to go.
+### Enemy shrink score
 
-### iframe
+* Players can score more points when destroying large enemies, as each time they are hit
+  they reduce in size, giving the player points as they do so. 
 
-* On the home page, there is an iframe with a google map embedded, to allow to user to find 
-the location of HK painting and decorating.  This can be used without having to leave the page.
+### Random enemies
 
-### footer
+* The enemies will be randomised in respect to starting position off screen, 
+  their size and their colour. 
 
-* Each page has a footer at the bottom, that contains contact details and social media links.
 
-### Cards 
+### Static Player
 
-* The portfolio page contains cards, to show images of, and descriptions of past work 
-in a tidy and easy to read format.
+* The player will be static in the center of the screen and enemies will approach from all angles. 
 
-### Form 
+### Projectiles 
 
-* The contact page contains a form, to allow users to leave their contact details and a description of the project 
-they would like Helen to work on.
+* The player will be able to shoot projectiles at the enemies. (THANK GOODNESS!!) 
 
-### Hover Effects
 
-* All links and buttons have hover effects, ranging from pointer events to colour changes
-to add some interactivity and visual feedback to the user.
+### Enemies will explode
+
+* When the enemies are hit, they will produce particles and when 
+  they are destroyed, they will explode in a firework type way.  The 
+  Particles from this will fade over time. 
 
 
 # Technologies Used
@@ -111,6 +110,8 @@ to add some interactivity and visual feedback to the user.
  * [HTML5](https://en.wikipedia.org/wiki/HTML5)
  
  * [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+ * [JavaScript] (https://en.m.wikipedia.org/wiki/JavaScript) 
 
  ## **Frameworks, Libraries and Programs Used**
 
