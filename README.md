@@ -144,10 +144,18 @@ For testing the code, I used the following;
 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
 
+- [Beautify Tools JS validator](https://beautifytools.com/javascript-validator.php)
+
 - [W3C Markup Validation](https://validator.w3.org/)
 
 These were used in particular, to check for errors in the code to enable me
 to rectify these and have a fully functioning website.
+
+# Testing the game functionality
+
+For the functionality tests, I ran through what I considered to be the core 
+functions of the game and attempted to use them as a standard player would.
+The results are as below.
 
 | Test Label     | Test Action   | Expected Outcome  | Test Outcome | 
 | -------------  |-------------- |----------------- | ------------ |
@@ -156,6 +164,17 @@ to rectify these and have a fully functioning website.
 | The score is<br>displayed.  | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
 | enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
 
+# Testing the game during the build
+
+To test the game while I was coding, I used the console.log()
+to show that certain functions acted the way they should.  I logged out the word 'go' to show that the action or event had taken place.
+
+| Test Label     | Test Action   | Expected Outcome  | Test Outcome | 
+| -------------  |-------------- |----------------- | ------------ |
+| Draw Player     | The word go <br>should be logged<br> to the console. | The word go will be <br>logged to<br>the console. | PASS
+| The player is <br> displayed      | Start the game<br> to check.      |  The player is <br> displayed  | PASS
+| The score is<br>displayed.  | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
+| enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
 
 ## Site owner Goals testing
 
