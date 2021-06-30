@@ -171,9 +171,9 @@ to show that certain functions acted the way they should.  I logged out the word
 
 | Test Label     | Test Action   | Expected Outcome  | Test Outcome | 
 | -------------  |-------------- |----------------- | ------------ |
-| Draw Player     | The word go <br>should be logged<br> to the console. | The word go will be <br>logged to<br>the console. | PASS
-| The player is <br> displayed      | Start the game<br> to check.      |  The player is <br> displayed  | PASS
-| The score is<br>displayed.  | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
+| Draw Player     | log the word<br>'go' to the<br>console. | The word go will be <br>logged to<br>the console. | PASS
+| Projectile<br>click event.| Set the event<br>to log 'go'<br>to the console.|   The word go will be <br>logged to<br>the console. | PASS
+| | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
 | enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
 
 ## Site owner Goals testing
