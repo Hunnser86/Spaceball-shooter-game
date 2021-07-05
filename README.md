@@ -54,10 +54,10 @@ It is designed to be responsive to different screen sizes, so any player can use
 
     * I made some simple wireframes in the design process to show how it will look on desktop and mobile.
 
-    ![screenshot of the wireframe process](../assets/wireframes/wireframe-1.jpg)
+    ![screenshot of the wireframe process](/assets/wireframes/wireframe-1.jpg)
 
 
-    ![Screenshot of Wireframe for desktop](../assets/wireframes/wireframe-2.jpg)
+    ![Screenshot of Wireframe for desktop](/assets/wireframes/wireframe-2.jpg)
 
     
 # Features 
@@ -111,7 +111,7 @@ It is designed to be responsive to different screen sizes, so any player can use
  
  * [CSS3](https://en.wikipedia.org/wiki/CSS)
 
- * [JavaScript] (https://en.m.wikipedia.org/wiki/JavaScript) 
+ * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) 
 
  ## **Frameworks, Libraries and Programs Used**
 
@@ -131,9 +131,9 @@ It is designed to be responsive to different screen sizes, so any player can use
 
    *  GitHub was used to store the code from the project after being pushed from the terminal.
 
- 5. [Adobe XD:](https://www.adobe.com/uk/products/xd.html)  
+ 5. [Figma:](https://www.figma.com/)  
 
-  * I used Adobe XD for the Wireframe, to full site visual design process.
+  * I used Figma for the Wireframe, to full site visual design process.
 
 
 # Testing
@@ -173,7 +173,7 @@ to show that certain functions acted the way they should.  I logged out the word
 | -------------  |-------------- |----------------- | ------------ |
 | Draw Player     | log the word<br>'go' to the<br>console. | The word go will be <br>logged to<br>the console. | PASS
 | Projectile<br>click event.| Set the event<br>to log 'go'<br>to the console.|   The word go will be <br>logged to<br>the console. | PASS
-| | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
+|The score<br>is displayed. | Check the top <br>left corner.      | The score is<br>displayed.   | PASS |
 | enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
 
 ## Site owner Goals testing
