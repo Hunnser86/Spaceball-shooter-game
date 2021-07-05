@@ -292,7 +292,7 @@ to better focus on that particular card.
 
 # Deployment
 
-  * To deploy the website, I used [GitHub pages](https://pages.github.com/).
+  * To deploy the game, I used [GitHub pages](https://pages.github.com/).
   
     The process for this was simple.  I used the terminal on the [Gitpod](https://www.gitpod.io/)
     IDE.  I used the git add . command to add all the files that had been worked on.  Next I used the git commit
@@ -305,14 +305,14 @@ to better focus on that particular card.
   [GitHub pages](https://github.com/Hunnser86/Milestone-project-version-3/settings) section of the page.  
   Next, I clicked the drop down menu on the source section
   and chose the master branch and the root folder from my repository.  This is how GitHub pages
-  built my site.
+  built my game.
 
-  * I then waited for the site to be built and followed the link at the top of the section.
+  * I then waited for the game to be built and followed the link at the top of the section.
 ---
 
-# Running the site locally
+# Running the game locally
 
-  *  To run the site locally, you will need to clone the GitHub [repository](https://github.com/Hunnser86/Milestone-project-version-3)
+  *  To run the game locally, you will need to clone the GitHub [repository](https://github.com/Hunnser86/Spaceball-shooter-game)
 
   *  To do this, simply go to the GitHub [repository](https://github.com/Hunnser86/Milestone-project-version-3)
 
@@ -331,19 +331,31 @@ to better focus on that particular card.
 
   **Content**
 
-  * All code was written by myself (Rob Hunns)
+  * All code was written by myself (Rob Hunns).
 
-  **Media**
+  **Tutorials**
 
-  * All images for this site were from [Pexels](https://www.pexels.com/).
+  * [For ideas on creating enemy ships](http://blog.sklambert.com/html5-canvas-game-the-enemy-ships/)  
 
-  * The HK Painting and Decorating logo was made by me using [Photoshop](https://www.adobe.com/uk/products/photoshop.html?mv=search&sdid=HCS3XL5Q&ef_id=Cj0KCQiAnKeCBhDPARIsAFDTLTKXrT7VH6NR1simCWWtdOOtNxR9viBbQy6tSZQqW10b0Ln4-LoTKJYaAipLEALw_wcB:G:s&s_kwcid=AL!3085!3!492471633964!e!!g!!photoshop!9753976727!99414617483&gclid=Cj0KCQiAnKeCBhDPARIsAFDTLTKXrT7VH6NR1simCWWtdOOtNxR9viBbQy6tSZQqW10b0Ln4-LoTKJYaAipLEALw_wcB)
+  * [For tips on canvas](https://www.w3schools.com/tags/ref_canvas.asp)
+
+  * [For information on canvas arc to draw the characters](https://www.w3schools.com/tags/canvas_arc.asp)
+
+  * [For information on collision detection](https://happycoding.io/tutorials/processing/collision-detection)
+
+  * [For how to move objects](https://stackoverflow.com/questions/6199018/moving-objects-on-html5-canvas)
 
 
-  **Acknowledgements**
 
-  * I would first like to acknowledge my mentor Ignatius, for the suppoprt he has
-    given me during the project.  Particularly for giding me towards good documentation
+  
+
+
+#  Acknowledgements
+  
+ 
+
+  * I would first like to acknowledge my mentor Brian, for the suppoprt he has
+    given me during the project.  Particularly for giding me towards good documentation.
     for the parts of the project where I needed to do a bit more research.
 
   * Codeinstitute: For providing such good training and tutorials, giving me the confidence to 
