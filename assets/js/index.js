@@ -3,6 +3,8 @@ const canvas = document.querySelector('canvas');
 //Select the canvas context API
 const ctxt = canvas.getContext('2d')
 
+
+
 //Set the height and width of the canvas
 canvas.width = innerWidth
 canvas.height = innerHeight

@@ -13,15 +13,16 @@
       <div class="fixed text-white text-sm ml-2 mt-2 select-none"><span>Score: </span><span id="scoreEl">0</span></div>
       <!--Create the start game modal-->
       <div class="fixed inset-0 flex items-center justify-center" id="modalEL">
-         <div class="bg-white max-w-md w-full p-6 text-center">
+         <div class="bg-white max-w-md w-full p-6 text-center" id="modal">
             <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
             <p class="text-sm text-grey-700 mb-4">Points</p>
             <div>
-               <button class="bg-blue-500 text-white w-full py-3 rounded-full text-sm" id="startGameBtn">Start Game</button>
+               <button class="bg-green-500 text-black w-full py-3 rounded-full text-sm" id="startGameBtn">Start Game</button>
             </div>
+            <p>Click or touch the screen to fire!!</p>
          </div>
       </div>
-      <canvas></canvas>
+      <canvas id="mycanvas"></canvas>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="./assets/js/index.js"></script>
