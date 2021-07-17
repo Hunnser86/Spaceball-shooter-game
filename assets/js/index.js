@@ -128,7 +128,7 @@ let player = new Player(x, y, 10, 'white')
 
 
 //Put the projectile here to allow it be accessed within the animate function
-const projectile = new Projectile(canvas.width / 2, canvas.height / 2, 5, 'red', {
+const projectile = new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', {
     x: 1,
     y: 1
 })
@@ -138,7 +138,7 @@ let  enemies = []
 let  particles = []
 
 function init() {
-     player = new Player(x, y, 10, 'white')
+     player = new Player(x, y, 10, 'rgb(255, 162, 255)')
      projectiles = []
      enemies = []
      particles = []

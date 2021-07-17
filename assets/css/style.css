@@ -1,11 +1,19 @@
 /*Remove the margin from the browser*/
 
 body{
-    background: black;
+    background: url(/assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     font-family: 'Tourney', sans-serif;
     font-weight: 900;
     
+}
+
+canvas{
+    background: url(/assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #modal{
