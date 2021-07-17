@@ -10,11 +10,7 @@ body{
     
 }
 
-canvas{
-    background: url(/assets/img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+#responsive-canvas { width: 100%; }
 
 #modal{
     background: rgb(255, 162, 255);
@@ -30,6 +26,12 @@ canvas{
 }
 
 
+@media screen and (max-width: 1440px){
+    body{
+        background-size: cover;
+        
+    }
+}
 
 
 
