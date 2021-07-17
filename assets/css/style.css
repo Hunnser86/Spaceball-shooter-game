@@ -3,13 +3,26 @@
 body{
     background: black;
     margin: 0;
-    
+    font-family: 'Tourney', sans-serif;
+    font-weight: 900;
     
 }
 
 #modal{
-    background: rgb(240, 120, 240);
+    background: rgb(255, 162, 255);
+    font-weight: 900;
 }
+
+#startGameBtn{
+    font-weight: 900;
+}
+
+#title{
+    font-weight: 500;
+}
+
+
+
 
 
 
