@@ -125,7 +125,7 @@ It is designed to be responsive to different screen sizes, so any player can use
 
  3. [Git:](https://github.com/)  
 
-   * Git was used for version control of the website by using the git commit and git push functions in the terminal, to to ensure any changes I made were not lost and were also meaningful to the development process. It would also help any other developers to assess or make changes in a real world setting.
+   * Git was used for version control of the game by using the git commit and git push functions in the terminal, to to ensure any changes I made were not lost and were also meaningful to the development process. It would also help any other developers to assess or make changes in a real world setting.
 
  4. [GitHub:](https://github.com/)
 
