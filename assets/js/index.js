@@ -124,11 +124,11 @@ const y = canvas.height / 2
 
 
 //Create the player
-let player = new Player(x, y, 10, 'white')
+let player = new Player(x, y, 10, 'rgb(255, 162, 255)')
 
 
 //Put the projectile here to allow it be accessed within the animate function
-const projectile = new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', {
+const projectile = new Projectile(canvas.width / 2, canvas.height / 2, 5, 'rgb(255, 162, 255)', {
     x: 1,
     y: 1
 })
@@ -185,7 +185,7 @@ let score = 0
 function animate() {
     animationId = requestAnimationFrame(animate)
     ctxt.fillStyle = 'rgba(0, 0, 0, 0.1)'//This creates a motion blur effect
-    ctxt.fillRect(0, 0, canvas.width, canvas.height) //cleard the screen to show circle projectiles rather than lines
+    ctxt.fillRect(0, 0, canvas.width, canvas.height) //cleared the screen to show circle projectiles rather than lines
     player.draw()
     particles.forEach((particle, index) => {
         if (particle.alpha <= 0) {
@@ -197,7 +197,7 @@ function animate() {
     })
     projectiles.forEach((projectile, index) => {
         projectile.update()
-        // Removes the projectiles from the edges of the screen to improve perfoprmance
+        // Removes the projectiles from the edges of the screen to improve performance
         if (Projectile.x + projectile.radius < 0 || 
             projectile.x - projectile.radius > canvas.width || 
             projectile.y + projectile.radius < 0 ||
@@ -283,7 +283,7 @@ addEventListener('click', (event) => {
     }
 
     projectiles.push(new Projectile(
-        canvas.width / 2, canvas.height / 2, 5, 'white',
+        canvas.width / 2, canvas.height / 2, 5, 'rgb(255, 162, 255)',
         velocity
     ))
 })
