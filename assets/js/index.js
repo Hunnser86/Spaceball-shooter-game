@@ -204,7 +204,7 @@
  
          enemies.push(new Enemy(x, y, radius, color, velocity));
          console.log(enemies);
-     }, 1000);
+     }, 3000);
  }
  
  //Create a function to animate the projectile
