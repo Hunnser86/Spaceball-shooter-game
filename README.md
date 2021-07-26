@@ -17,7 +17,8 @@ It is designed to be responsive to different screen sizes, so any player can use
      
      * **Site Owner Goals**
         
-        *  To give players a fun game.
+       **To give players a fun game.**
+
         *  To make it simple to understand and easy to use
         * the game should start and stop at the appropriate times
         * the enemies should explode
@@ -192,107 +193,98 @@ I had a few declaration errors which were simple enough to fix, and finally I ha
 
 ## Site owner Goals testing
 
-  * **To give information about their service.**
+  **To give players a fun game.**
+
+   *  **To make it simple to understand and easy to use**
+    
+      To achieve this, I included a modal on the start screen of the game.  The modal displays the simple instructions "click or touch the screen to fire".  It also displays the players score and a button to start the game.    
+
+   * **The game should start and stop at the appropriate times.**
+     
+     This goal was acieved simply by putting a button in the modal to start the game.  To end the game, the player must be hit by an enemy.  This was slightly more complicated.
+
+     I created an if statement, wherein, if the distance between the enemy radius and the player radius is less than one, the animation function ceases and the modal displays along with the score.
+
+     `if (dist - enemy.radius - player.radius < 1) {
+             cancelAnimationFrame(animationId);
+             modalEL.style.display = 'flex';
+             bigScoreEl.innerHTML = score;
+         }`
+
+   * **the enemies should explode**
+
+     AND DO THEY EVER!
+    I created a particle function which not only draws a particle, but updates the draw function to slow it's velocity to give it that outer space feel and then fade them out form the screen.
+
+`const Particle = function () {
+     function Particle(x, y, radius, color, velocity) {
+         _classCallCheck(this, Particle);
+ 
+         this.x = x;
+         this.y = y;
+         this.radius = radius;
+         this.color = color;
+         this.velocity = velocity;
+         this.alpha = 1;
+     }
+ 
+     _createClass(Particle, [{
+         key: 'draw',
+         value: function draw() {
+             ctxt.save();
+             ctxt.globalAlpha = this.alpha;
+             ctxt.beginPath();
+             ctxt.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+             ctxt.fillStyle = this.color;
+             ctxt.fill();
+             ctxt.restore();
+         }
+     }, {
+         key: 'update',
+         value: function update() {
+             this.draw();
+             this.velocity.x *= friction; //slows the velocity over time
+             this.velocity.y *= friction;
+             this.x = this.x + this.velocity.x;
+             this.y = this.y + this.velocity.y;
+             this.alpha -= 0.01;
+         }
+     }]);`
+            
     
 ---
-* **To show work they have completed in the past.**
 
-  * There is a carousel on the home page showing some recent projects.  
-  There are controls, allowing some user interaction.
-
-  * There is a portfolio page, detailing some recent projects.  The page displays
-   the projects on cards with an image on top and a description underneath.
-When the user hovers over the cards with the mouse, the card scales up to enable the user 
-to better focus on that particular card.  
----
-* **To gain more customers.**
-
-  * All the previous information helps to gain more customers, by allowing the users 
-    to make an informed descision on if they would like to hire Helen or not.
-
-  * There is a contact page with a form, allowing users to give Helen their details
-    and a description of the work they need doing.
-
-  * There is a footer on each page providing contact details for Helen, enabling users 
-    to hire her.
----
-* **Allow customers to leave their contact details in regards to a quote.**
-
-  * There is a contact page containing a form to allow users to leave their name,
-    phone number and email address for Helen.  This not only allows the user to contact Helen, but it 
-    enables Helen to contact the user, if they decide not to leave details about the 
-    job.  The name and email address are both required fields.  This is to allows Helen
-    enough information to be able to contact the user in case the user is unable to leave 
-    a phone number or job description.
 
 ## Visitor Goals
 
-* **Visitors should be able to quickly contact and hire the tradesperson, quickly and hassle free.**
 
-  *  There is a footer on each page containing contact details.
 
-  *  There is a contact page with a form allowing the customer to leave their contact
-     information and details about the job.
+ *  **visitors should be able to immediately begin playing.**
+     
+      This was achieved, simply by putting the modal on the start page, with a button to start the game.
 
-  * There are buttons on the home page and portfolio page that direct the user to the contact#
-    page.  There is also a link to the contact page in the navbar.
----
-
-* **Visitors Should be able to come to the site and immediately understand the purpose of the site.**
-
-  * On the home page, there is a logo in the navbar with the words "Painter" and "Decorator".
-
-  * There is a description in the hero section, with a button underneath.  This shows
-    the user what the site is about and it shows them that they can hire Helen.
----
-
-* **They should be able to easily achieve what they came to do (i.e get a quote for a decorating service).**
-
-  * Straight away on the home page, there is a contact link in the navbar and a button in the
-    hero section saying "contact us".  
-
-  * There is a footer on each page with contact details, allowing the user to contact and hire 
-    Helen.
-
-  * There are testimonials and recent project sections that allow the user to see more about
-    Helen and make an informed descision on whether they would like to hire her.
-
-  *  There is a contact page with a form, allowing the user to leave their details and contact
-     Helen about a job they need doing.
----
-
-* **They should be able to view past works on a portfolio page, which is set out clearly and easy to see.**
-
-  * There is a portoflio page that shows recent projects.  They are set out on cards, which clearly 
-    shows an image of the project and gives a detailed description below.
----
-
-* **They will also be able to find their social media sites and other contact information.**
-
-   * At the bottom of each page, there is a footer that contains Helen's social media links,
-   phone number and email address.
-
-   * On the home page, there is an iframe where the user can find the address and location
-     of the business.
+   *  **They should be able to see their score.**
+      
+      The score is displayed throughout the game, in the top left of the screen.  At the end of the game, the high score is displayed in the modal.
+      
+   *  **They should be able to restart the game from scratch.**
+     
+      The player simply needs to click the button, and off they go.
 ---
 # Client based testing
 
-  * For the client based tests, I sent the link to the website to various people and asked them, to 
+  * For the client based tests, I sent the link to the game to various people and asked them, to 
   use it.  I asked the first person to test it on mobile devices such as , mobile phones and tablets.
   
-    They were asked to check both orientations, to see if the responsiveness worked, and then to load the
-    pages one by one to see if the animations worked.
+    They were asked to check both orientations, to see if the responsiveness worked.
     They were also asked to check the site accross Chrome, Firefox and Opera browsers to check compatability.
 
-  * For the next test I asked three people to check the desktop version of the site.  Each of them had a
-  different browser.  One had Chrome, one had Firefox and one had Opera.  
+  * For the next test I asked three people to check the desktop version of the game. Each of them had a different browser.  One had Chrome, one had Firefox and one had Opera.  
 
-    I asked them to check the animations for the pages and to check for any gramatical errors.
+    I asked them to check the gameplay for glitches such as players not displaying or firing etc and to check for any gramatical errors.
 
-  * After the tests were completed, they reported back that the animations worked fine accross all browsers
-  and the responsiveness worked on all the mobile devices that were used.  However, there were some gramatical errors
-  on the home page and portfolio page.  I had used first person speech rather than the third person.  I 
-  then went through and rectified these errors.    
+  * After the tests were completed, they reported back that the game worked fine accross all browsers
+  and the responsiveness worked on all the mobile devices that were used.  There were no gramatical errors either (which was nice).    
 
 # Deployment
 
@@ -318,7 +310,7 @@ to better focus on that particular card.
 
   *  To run the game locally, you will need to clone the GitHub [repository](https://github.com/Hunnser86/Spaceball-shooter-game)
 
-  *  To do this, simply go to the GitHub [repository](https://github.com/Hunnser86/Milestone-project-version-3)
+  *  To do this, simply go to the GitHub [repository](https://github.com/Hunnser86/Spaceball-shooter-game).
 
      * Next, click the dropdown menu named "code".  This will bring up the clone menu.
      
@@ -348,6 +340,8 @@ to better focus on that particular card.
   * [For information on collision detection](https://happycoding.io/tutorials/processing/collision-detection)
 
   * [For how to move objects](https://stackoverflow.com/questions/6199018/moving-objects-on-html5-canvas)
+
+  * [for creating particles](https://modernweb.com/creating-particles-html5-canvas/)
 
 
 
