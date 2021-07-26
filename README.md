@@ -111,7 +111,9 @@ It is designed to be responsive to different screen sizes, so any player can use
  
  * [CSS3](https://en.wikipedia.org/wiki/CSS)
 
- * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) 
+ * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript)
+
+ 
 
  ## **Frameworks, Libraries and Programs Used**
 
@@ -140,11 +142,13 @@ It is designed to be responsive to different screen sizes, so any player can use
 
 For my testing I used manual testing.
 
-For testing the code, I used the following;
+For testing the code for errors, I used the following;
 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
 
 - [Beautify Tools JS validator](https://beautifytools.com/javascript-validator.php)
+
+- [es6console](https://es6console.com) 
 
 - [W3C Markup Validation](https://validator.w3.org/)
 
@@ -176,20 +180,20 @@ to show that certain functions acted the way they should.  I logged out the word
 |The score<br>is displayed. | Check the top <br>left corner.      | The score is<br>displayed.   | PASS |
 | enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
 
+# Code errors from the validator tools
+
+As you can see, there is very little HTML or CSS in this project, so the code validators threw no errors (which was nice to see for once!).
+
+However, when I came to use the beautify tools JS validator, I realised that after having read and followed the various tutorials and documentation, that I had been using the es6 syntax and that arrow functions were "NOT ALLOWED!".
+
+Being a complete noob, I had no idea of the mish mash of syntaxes I had used (what a nightmare!).  This lead me to more research, and eventually I found an online tool that would convert the es6 syntax, to an older version that did no throw any errors (PHEW!).
+
+I had a few declaration errors which were simple enough to fix, and finally I had errorless code (HUZZAH!).
+
 ## Site owner Goals testing
 
   * **To give information about their service.**
     
-    * At the top of the home page, there is a description in the hero section explaining
-      what Helen does.
-
-    * There is an iframe on the home page that allows users to find the location of the business.
-     This can be used without leaving the current page.  
-
-    * There is a footer on each page containing, phone number, email and social media links.
-    ( The social media links open on a new tab, so the user does not have to leave the current page).
-
-    * There are testimonials on the home page, allowing users to understand more about how Helen works. 
 ---
 * **To show work they have completed in the past.**
 
