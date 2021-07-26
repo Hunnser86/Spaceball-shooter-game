@@ -216,7 +216,7 @@ I had a few declaration errors which were simple enough to fix, and finally I ha
      AND DO THEY EVER!
     I created a particle function which not only draws a particle, but updates the draw function to slow it's velocity to give it that outer space feel and then fade them out form the screen.
 
-`const Particle = function () {
+    `const Particle = function () {
      function Particle(x, y, radius, color, velocity) {
          _classCallCheck(this, Particle);
  
