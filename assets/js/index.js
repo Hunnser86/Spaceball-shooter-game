@@ -16,7 +16,7 @@ const modalEL = document.querySelector('#modalEL');
 const bigScoreEl = document.querySelector('#bigScoreEl');
 const x = canvas.width / 2;
 const y = canvas.height / 2;
-
+const friction = 0.99;
 //create the Player class using a constructor
 
 class Player {
@@ -74,8 +74,12 @@ class Projectile {
         ctxt.fillStyle = this.color;
         ctxt.fill();
     }
-// Adding the x and y velocity with an update function.
+
 /*
+For each frame of the animation loop we set the x and y
+coordinates for each projectile by creating the update function. 
+It determines the velocity by taking its current coordinate
+and adding its current velocity together.
 
 */
     update() {
@@ -102,7 +106,7 @@ class Enemy {
         ctxt.fillStyle = this.color;
         ctxt.fill();
     }
-
+// I used the same update function from the projectile.
     update() {
         this.draw();
         this.x = this.x + this.velocity.x;
@@ -110,7 +114,7 @@ class Enemy {
     }
 }
 
-const friction = 0.99;
+
 class Particle {
     constructor(x, y, radius, color, velocity) {
         this.x = x;
@@ -148,10 +152,17 @@ class Particle {
 
 
 //Create the player
-let player = new Player(x, y, 10, 'rgb(255, 162, 255)');
+let player = new Player(
+    x,
+    y, 
+    10, 
+    'rgb(255, 162, 255)'
+    );
 
 
-//Put the projectile here to allow it be accessed within the animate function
+/* Put the projectile here to allow it be accessed within the animate function
+   correcting any scope issues.
+*/   
 const projectile = new Projectile(
     canvas.width / 2,
     canvas.height / 2, 5,
@@ -160,7 +171,9 @@ const projectile = new Projectile(
     x: 1,
     y: 1
 });
-//create an array to draw multiple projectiles and enemies
+/* create an array to draw multiple projectiles and enemies
+ at the same time.
+*/
 let projectiles = [];
 let  enemies = [];
 let  particles = [];
@@ -209,6 +222,12 @@ function spawnEnemies() {
 }
 
 //Create a function to animate the projectile
+
+/*
+By calling the animate function from inside the animate function
+it will loop over and over again.
+
+*/
 let animationId;
 let score = 0;
 function animate() {
@@ -309,7 +328,34 @@ function animate() {
 The first argument the listener takes is the event
 @param {event} 'click'
 
+  The second argument is an arrow function which
+  creates a new projectile (see Projectile class on line 158) 
+  whenever the mouse clicks.
+
+  The function takes an x and y like the player but
+  the x and y coordinates are created from the position of 
+  the mouse click on the screen. This determines the direction of the 
+  projectile.
+
+  so...
+
+  @param {event} 'click'(clientX)- The x coordinate where the mouse
+  clicked on the screen.
+
+  @param {event}  'click'(clientY)- the y coordinate where the
+  mouse clicked on the screen.
+  
+  canvas.height / 2 - sets the y coordinate start position 
+  of the projectile to the center of the screen on the y
+  axis.
+  
+  canvas.width / 2 - sets the x coordinate start position 
+  of the projectile to the center of the screen on the x
+  axis. 
+
 */
+
+
 
     addEventListener('click', (event) => {
 //Trigonometry to make the projectile aim where we click
