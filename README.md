@@ -1,14 +1,39 @@
 # Spaceball Shooter Game
 
-This is a fun game I made using [HTML canvas](https://en.wikipedia.org/wiki/Canvas_element) .
+In modern times, when someone asks "Hey are you a gamer?",
+I often think to myself.....
+"Yes, but not like you.".
 
-It has a simple design, much like [asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)), where the player is in the center of the screen and the enemies attack from all sides.
+I grew up playing games where I had to use my imagination.
 
-It is designed to be responsive to different screen sizes, so any player can use it on any device.
+The first game I ever played was The Hobbit on the ZX Spectrum.
+A SLOOOOOOOOW process, but one that I will never forget.  The sound of the game loading from the cassette tape on my parents old black and white tv, the pages loading one line of pixels at a time.  It was all very memorable.
 
+The second game I played was Asteroids.
+
+Asteroids was where it was at!!!  I sucked at the game, but I would play it for as long as I was allowed. (ugh...Mums!)
+
+This is why I wanted to make a game as similar to that as I could.  I also wanted to make a game that could be easily accessed on any machine, for free, whenever you want, for however long you want (Put that in your pipe and smoke it mums of the world!).
+
+But being the noob that I am in the coding world, how was I going to make a game??? Enter [HTML canvas](https://en.wikipedia.org/wiki/Canvas_element) .
+
+After a tonne of research about how to make games with JavaScript, I just happened upon HTML canvas and how you could make fireworks!  It looked so much like retro video game explosions, I knew this was what I needed use.
+
+Once again I was diving into research about how to use canvas, but also now how to make the game function.  It was not easy!  Lots of maths and functions within functions, but I got there, and as you can see, it turned out amzingly well!
+
+I hope you enjoy playing it as much as I enjoyed making it.
 ---
 
-## User Experience
+## Index - Table of contents
+* [User Experience (UX)](#user-experience) 
+* [Features](#features)
+* [Design](#design)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Acknowledgements](#credits)
+
+## User Experience (UX)
 
 ---
 
@@ -29,6 +54,12 @@ It is designed to be responsive to different screen sizes, so any player can use
        *  They should be able to see their score
        *  They should be able to restart the game from scratch
 ---
+ ## Structure
+
+ ***
+ The Game will consist of a simple start screen that displays a modal, with a start game button, the player's score and the instructions on how to play.
+
+ Once the start game button is pressed, the game will show a screen with a black background and the player in the middle.  The enemies will fly in from all directions.
 
  ## Design
 ---
@@ -44,12 +75,13 @@ It is designed to be responsive to different screen sizes, so any player can use
 
    * **Typography**
 
-       *  I used the standard Sans serif font for my score and my modal.
-       I did this as I felt it fit the style of the game.
+       *  I used the standard Sans serif font for my score in the top left of the screen and Tourney for my modal.
+       I used these fonts as I felt it fit the style of the game.
 
    * **Imagery**
 
      *  The imagery used was a simple black background with colourful enemies to allow for good contrast.
+     I decided to make the modal look like something from windows 95, hence the garish pink and green colour scheme.
 
 * **Wireframes**
 
@@ -108,12 +140,11 @@ It is designed to be responsive to different screen sizes, so any player can use
 ## **Launguages**
 
     
- * [HTML5](https://en.wikipedia.org/wiki/HTML5)
+ * [HTML5](https://en.wikipedia.org/wiki/HTML5) - Mark-up language using semantic structure.
  
- * [CSS3](https://en.wikipedia.org/wiki/CSS)
+ * [CSS3](https://en.wikipedia.org/wiki/CSS) - Cascading style sheet used to style.
 
- * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript)
-
+ * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) - Programming language, used to create almost every aspect of the game.
  
 
  ## **Frameworks, Libraries and Programs Used**
@@ -137,6 +168,11 @@ It is designed to be responsive to different screen sizes, so any player can use
  5. [Figma:](https://www.figma.com/)  
 
   * I used Figma for the Wireframe, to full site visual design process.
+
+ 6. [Google Fonts](https://fonts.google.com/) 
+
+  * I used the font Tourney from Google fonts, as it looked the fitting
+    for the style of the game.  
 
 
 # Testing
@@ -167,7 +203,10 @@ The results are as below.
 | Game Setup     | The modal is <br> displayed and the <br> button starts the <br>game. | The game starts. | PASS
 | The player is <br> displayed      | Start the game<br> to check.      |  The player is <br> displayed  | PASS
 | The score is<br>displayed.  | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
-| enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
+| enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS | 
+| Enemies explode     | When hit, enemies <br> explode, creating <br> particles to fly out. | Enemies explode . | PASS 
+| Exlosions fade     | When enemies explode <br> the particles they create <br> fade out. | Particles fade . | PASS
+| Explosion particles<br> slow down over<br>time.| Destroy enemy. | Particles slow down<br>when floating round . | PASS  
 
 # Testing the game during the build
 
@@ -178,18 +217,29 @@ to show that certain functions acted the way they should.  I logged out the word
 | -------------  |-------------- |----------------- | ------------ |
 | Draw Player     | log the word<br>'go' to the<br>console. | The word go will be <br>logged to<br>the console. | PASS
 | Projectile<br>click event.| Set the event<br>to log 'go'<br>to the console.|   The word go will be <br>logged to<br>the console. | PASS
+| Touch screen<br>to fire     | Touch the screen <br> during gameplay <br> to fire <br>projectiles. | Projectiles fire. | PASS
 |The score<br>is displayed. | Check the top <br>left corner.      | The score is<br>displayed.   | PASS |
 | enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
+
 
 # Code errors from the validator tools
 
 As you can see, there is very little HTML or CSS in this project, so the code validators threw no errors (which was nice to see for once!).
 
-However, when I came to use the beautify tools JS validator, I realised that after having read and followed the various tutorials and documentation, that I had been using the es6 syntax and that arrow functions were "NOT ALLOWED!".
 
-Being a complete noob, I had no idea of the mish mash of syntaxes I had used (what a nightmare!).  This lead me to more research, and eventually I found an online tool that would convert the es6 syntax, to an older version that did no throw any errors (PHEW!).
 
-I had a few declaration errors which were simple enough to fix, and finally I had errorless code (HUZZAH!).
+I had a few declaration errors in the JavaScript which were simple enough to fix, and finally I had errorless code (HUZZAH!).
+
+---
+
+## Known Bugs
+---
+
+As you can see, I used arrow functions and trailing commas in argument lists which are constructs used in ES6 and ES8, so the validator threw some errors about these.  However, this was the syntax I wanted to use for things to be quicker and less verbose, so I have not tried to rectify these.
+
+I used gsap to shrink large enemies and remove them if they were a certain size.  For some reason, this threw an error? It was of no consequence, so I left it in.
+
+---
 
 ## Site owner Goals testing
 
@@ -216,40 +266,38 @@ I had a few declaration errors which were simple enough to fix, and finally I ha
      AND DO THEY EVER!
     I created a particle function which not only draws a particle, but updates the draw function to slow it's velocity to give it that outer space feel and then fade them out form the screen.
 
-    `const Particle = function () {
-     function Particle(x, y, radius, color, velocity) {
-         _classCallCheck(this, Particle);
- 
-         this.x = x;
-         this.y = y;
-         this.radius = radius;
-         this.color = color;
-         this.velocity = velocity;
-         this.alpha = 1;
-     }
- 
-     _createClass(Particle, [{
-         key: 'draw',
-         value: function draw() {
-             ctxt.save();
-             ctxt.globalAlpha = this.alpha;
-             ctxt.beginPath();
-             ctxt.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-             ctxt.fillStyle = this.color;
-             ctxt.fill();
-             ctxt.restore();
-         }
-     }, {
-         key: 'update',
-         value: function update() {
-             this.draw();
-             this.velocity.x *= friction; //slows the velocity over time
-             this.velocity.y *= friction;
-             this.x = this.x + this.velocity.x;
-             this.y = this.y + this.velocity.y;
-             this.alpha -= 0.01;
-         }
-     }]);`
+    class Particle {
+    constructor(x, y, radius, color, velocity) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.velocity = velocity;
+        this.alpha = 1;
+    }
+
+    draw() {
+        ctxt.save();
+        ctxt.globalAlpha = this.alpha;
+        ctxt.beginPath();
+        ctxt.arc(
+            this.x, this.y, this.radius, 0, Math.PI * 2,
+            false);
+        ctxt.fillStyle = this.color;
+        ctxt.fill();
+        ctxt.restore();
+    }
+
+    update() {
+        this.draw();
+        //slows the velocity over time
+        this.velocity.x *= friction; 
+        this.velocity.y *= friction;
+        this.x = this.x + this.velocity.x;
+        this.y = this.y + this.velocity.y;
+        this.alpha -= 0.01;
+    }
+}
             
     
 ---
@@ -353,8 +401,7 @@ I had a few declaration errors which were simple enough to fix, and finally I ha
  
 
   * I would first like to acknowledge my mentor Brian, for the suppoprt he has
-    given me during the project.  Particularly for giding me towards good documentation.
-    for the parts of the project where I needed to do a bit more research.
+    given me during the project.  Particularly for giding me towards good documentation, for the parts of the project where I needed to do a bit more research.
 
   * Codeinstitute: For providing such good training and tutorials, giving me the confidence to 
     keep going and to hone my problenm solving skills.
