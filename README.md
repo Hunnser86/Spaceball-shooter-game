@@ -19,7 +19,7 @@ But being the noob that I am in the coding world, how was I going to make a game
 
 After a tonne of research about how to make games with JavaScript, I just happened upon HTML canvas and how you could make fireworks!  It looked so much like retro video game explosions, I knew this was what I needed use.
 
-Once again I was diving into research about how to use canvas, but also now how to make the game function.  It was not easy!  Lots of maths and functions within functions, but I got there, and as you can see, it turned out amzingly well!
+Once again I was diving into research about how to use canvas, but also now how to make the game function.  It was not easy!  Lots of maths and functions within functions, but I got there, and as you can see, it turned out amazingly well!
 
 I hope you enjoy playing it as much as I enjoyed making it.
 ---
