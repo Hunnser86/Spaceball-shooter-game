@@ -10,13 +10,24 @@ const innerHeight = window.innerHeight;
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
+// The score element in the top left corner
 const scoreEl = document.querySelector('#scoreEl');
+
+// The start game button
 const startGameBtn = document.querySelector('#startGameBtn');
+
+// The modal that displays the score and the start button
 const modalEL = document.querySelector('#modalEL');
+
+// The score displayed at the end of the gasme
 const bigScoreEl = document.querySelector('#bigScoreEl');
+
+
 const x = canvas.width / 2;
 const y = canvas.height / 2;
 const friction = 0.99;
+
+
 //create the Player class using a constructor
 
 class Player {
@@ -89,6 +100,8 @@ and adding its current velocity together.
     }
 }
 
+// I used the samew method once again to creat the enemy.
+
 class Enemy {
     constructor(x, y, radius, color, velocity) {
         this.x = x;
@@ -152,6 +165,13 @@ class Particle {
 
 
 //Create the player
+
+/*
+By taking the x, y, radius and color from the constructor
+we creat the player.
+
+*/
+
 let player = new Player(
     x,
     y, 
@@ -160,7 +180,8 @@ let player = new Player(
     );
 
 
-/* Put the projectile here to allow it be accessed within the animate function
+/*
+ Put the projectile here to allow it be accessed within the animate function
    correcting any scope issues.
 */   
 const projectile = new Projectile(
@@ -171,7 +192,10 @@ const projectile = new Projectile(
     x: 1,
     y: 1
 });
-/* create an array to draw multiple projectiles and enemies
+
+
+/* 
+ create an array to draw multiple projectiles and enemies
  at the same time.
 */
 let projectiles = [];
